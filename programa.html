@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Programa completo</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/header-fotter.css" />
+    <link rel="stylesheet" type="text/css" href="css/form.css" />
+
+    <!-- engine -->
+    <script type="text/javascript" src="js/engine.js"></script>
+    <!-- Sumas script -->
+    <script type="text/javascript" src="js/sumas.js"></script>
+        <!-- Restaas script -->
+    <script type="text/javascript" src="js/restas.js"></script>
+            <!-- Multiplicaciones script -->
+    <script type="text/javascript" src="js/multiplicaciones.js"></script>
+    <!-- jsPDF script -->
+    <script type="text/javascript" src="js/jspdf.min.js"></script>
+
+</head>
+
+<body>
+
+    <div class="topnav">
+        <a href="index.html">Inicio</a>
+        <a href="estudiantes.html">Estudiantes</a>
+        <a class="active" href="programa.html">Programa</a>
+        <a href="nuevo.html">Nuevo</a>
+        <a href="#info">Info</a>
+        <div class="search-container">
+            <form onsubmit="search()">
+                <a href="#logout">Salir</a>
+                <input type="text" placeholder="Buscar..." name="search" id="search">
+            </form>
+        </div>
+    </div>
+
+    <div class="content">
+        <h1>Sumas</h1>
+        <br>
+        <a href="utils/Nivel_A.pdf">[Básico]</a><br><br>
+        <a href="javascript:suma_a1(1)">A1. Suma 1 a un número menor a 5</a><br>
+        <a href="javascript:suma_a2(1)">A2. Suma 1 a un número menor a 10</a><br>
+        <a href="javascript:suma_a3(1)">A3. Sumar hasta 5</a><br>
+        <a href="javascript:suma_a4(1)">A4. Sumar hasta 10</a><br>
+        <a href="javascript:suma_a5(1)">A5. Sumale a 10 - vertical</a><br>
+        <a href="javascript:suma_a6(1)">A6. Suma hasta 20 - vertical</a><br>
+        <a href="javascript:suma_a7(1)">A7. Sumale a 20 - vertical</a><br>
+        <a href="javascript:suma_a8(1)">A8. Sumas hasta 50 - vertical</a><br>
+        <a href="javascript:suma_a9(1)">A9. Sumale a 10 - horizontal</a><br>
+        <a href="javascript:suma_a10(1)">A10. Suma hasta 20 - horizontal</a><br>
+        <a href="javascript:suma_a11(1)">A11. Sumale a 20 - horizontal</a><br>
+        <a href="javascript:suma_a12(1)">A12. Sumas hasta 50 - horizontal</a><br>
+        <a href="javascript:suma_a13(1)">A13. Suma de decenas menor a 50 - vertical</a><br>
+        <a href="javascript:suma_a14(1)">A14. Suma de decenas menor a 100 - vertical</a><br>
+        <a href="javascript:suma_a15(1)">A15. Suma de decenas menor a 50 - horizontal</a><br>
+        <a href="javascript:suma_a16(1)">A16. Suma de decenas menor a 100 - horizontal</a><br>
+
+        <a href="javascript:suma_a17(1)">A17. Suma a una decena (10..90) un número del 1 al 10 - vertical</a><br>
+        <a href="javascript:suma_a18(1)">A18. Suma a una decena (10..90) un número del 1 al 10 - lineal</a><br>
+        <a href="javascript:suma_a19(1)">A19. Suma a un número (1..10) una decena (10..90) - vertical</a><br>
+        <a href="javascript:suma_a20(1)">A20. Suma a un número (1..10) una decena (10..90) - lineal</a><br>
+
+        <a href="javascript:suma_a21(1)">A21. Suma a 100 una decena (10..90) - vertical</a><br>
+        <a href="javascript:suma_a22(1)">A22. Suma a 100 una decena (10..90) - lineal</a><br>
+        <a href="javascript:suma_a23(1)">A23. Suma a 100 un numero (1..100) - vertical</a><br>
+        <a href="javascript:suma_a24(1)">A24. Suma a 100 un numero (1..100) - horizontal</a><br>
+
+        <br>[Intermedio] <br>
+        <a href="javascript:suma_a25(1)">A25. Suma a una centena r(9)*100 un numero r(100)</a><br>
+        <a href="javascript:suma_a26(1)">A26. Suma dos centenas donde la suma sea igual o menor a 1000 - vertical</a><br>
+        <a href="javascript:suma_a27(1)">A27. Suma un numero del 1 al 100 a otro número del 1 al 100 - vertical</a><br>
+        <a href="javascript:suma_a28(1)">A28. Suma un numero del 1 al 200 a otro número del 1 al 200 - vertical</a><br>
+        <a href="javascript:suma_a29(1)">A29. Suma un numero del 1 al 500 a otro número del 1 al 500 - vertical</a><br>
+
+        <a href="javascript:suma_a30(1)">A30. Suma a=r(50)*10 y b=r(50)*10 donde (a+b) sea menor a 1000</a><br>
+        <a href="javascript:suma_a31(1)">A31. A r(9)*100 suma un numero del (1..100)</a><br>
+        <a href="javascript:suma_a32(1)">A32. Suma r(1000) a r(1000)</a><br>
+        <a href="javascript:suma_a33(1)">A33. Suma r(5000) a r(5000)</a><br>
+
+        <a href="javascript:suma_a34(1)">A34. Suma r(10000) a r(10000)</a><br>
+        <br>[Avanzado] <br>
+        <a href="javascript:suma_a35(1)">A35. Donde a=r(10), suma r(a) + r(a) + r(a) - horizontal</a><br>
+        <a href="javascript:suma_a36(1)">A36. Donde a=r(10), suma r(a) + r(a) + r(a) - vertical</a><br>
+        <a href="javascript:suma_a37(1)">A37. Donde a=r(99), suma r(a) + r(a) + r(a) - vertical</a><br>
+
+        <a href="javascript:suma_a38(1)">A38. Donde a=r(200), suma r(a) + r(a) + r(a) - vertical</a><br>
+        <a href="javascript:suma_a39(1)">A39. Donde a=r(500), suma r(a) + r(a) + r(a) - vertical</a><br>
+        <a href="javascript:suma_a40(1)">A40. Donde a=r(1000), suma r(a) + r(a) + r(a) - vertical</a><br>
+        <a href="javascript:suma_a41(1)">A41. Donde a=r(5000), suma r(a) + r(a) + r(a) - vertical</a><br>
+
+        <a href="javascript:suma_a42(1)">A42. Donde a=r(10,000), suma r(a) + r(a) + r(a) - vertical</a><br>
+        <a href="javascript:suma_a43(1)">A43. Donde a=r(100,000), suma r(a) + r(a) + r(a) - vertical</a><br>
+        <a href="javascript:suma_a44(1)">A44. Donde a=r(1,000,000), suma r(a) + r(a) + r(a) - vertical</a><br>
+        <a href="javascript:suma_a45(1)">A45. Donde a=r(1,000,000), suma r(a) + r(a) + r(a) + r(a) - vertical</a><br>
+
+        <h1>Restas</h1>
+
+        [Básico]<br>
+
+        <a href="javascript:resta_b1(1)">B1. Resta uno a un numero entre el 1 y el 5 - horizontal</a><br>
+        <a href="javascript:resta_b2(1)">B2. Resta uno a un numero entre el 1 y el 10 - horizontal</a><br>
+        <a href="javascript:resta_b3(1)">B3. Resta dos a un numero entre el 2 y el 5 - horizontal</a><br>
+        <a href="javascript:resta_b4(1)">B4. Resta dos a un numero entre el 2 y el 10 - horizontal</a><br>
+        <a href="javascript:resta_b5(1)">B5. Resta uno a un numero entre el 1 y el 5 - vertical</a><br>
+        <a href="javascript:resta_b6(1)">B6. Resta uno a un numero entre el 1 y el 10 - vertical</a><br>
+        <a href="javascript:resta_b7(1)">B7. Resta dos a un numero entre el 2 y el 5 - vertical</a><br>
+        <a href="javascript:resta_b8(1)">B8. Resta dos a un numero entre el 2 y el 10 - vertical</a><br>
+        <a href="javascript:resta_b9(1)">B9. Resta: r(5) menos r(4) - horizontal</a><br>
+        <a href="javascript:resta_b10(1)">B10. Resta: r(5) menos r(4) - vertical</a><br>
+        <a href="javascript:resta_b11(1)">B11. Resta: r(10) menos r(9) - horizontal</a><br>
+        <a href="javascript:resta_b12(1)">B12. Resta: r(10) menos r(9) - vertical</a><br>
+
+        <br>[Intermedio]<br>
+
+        <a href="javascript:resta_b13(1)">B13. Resta: r(15) menos r(10) - vertical </a><br>
+        <a href="javascript:resta_b14(1)">B14. Resta: r(15) menos r(15) - vertical</a><br>
+        <a href="javascript:resta_b15(1)">B15. Resta: r(20) menos r(10) - vertical</a><br>
+        <a href="javascript:resta_b16(1)">B16. Resta: r(20) menos r(20) - vertical</a><br>
+       
+        <a href="javascript:resta_b17_a_b26(1,'B17',1)">B17. Resta: r(10)*10 - 1 - horizontal</a><br>
+        <a href="javascript:resta_b17_a_b26(1,'B18',2)">B18. Resta: r(10)*10 - 2 - horizontal</a><br>
+        <a href="javascript:resta_b17_a_b26(1,'B19',3)">B19. Resta: r(10)*10 - 3 - horizontal</a><br>
+        <a href="javascript:resta_b17_a_b26(1,'B20',4)">B20. Resta: r(10)*10 - 4 - horizontal</a><br> 
+        <a href="javascript:resta_b17_a_b26(1,'B21',5)">B21. Resta: r(10)*10 - 5 - horizontal</a><br> 
+        <a href="javascript:resta_b17_a_b26(1,'B22',6)">B22. Resta: r(10)*10 - 6 - horizontal</a><br> 
+        <a href="javascript:resta_b17_a_b26(1,'B23',7)">B23. Resta: r(10)*10 - 7 - horizontal</a><br> 
+        <a href="javascript:resta_b17_a_b26(1,'B24',8)">B24. Resta: r(10)*10 - 8 - horizontal</a><br> 
+        <a href="javascript:resta_b17_a_b26(1,'B25',9)">B25. Resta: r(10)*10 - 9 - horizontal</a><br> 
+        <a href="javascript:resta_b17_a_b26(1,'B26',10)">B26. Resta: r(10)*10 - 10 - horizontal</a><br>
+        
+        <a href="javascript:resta_b27(1)">B27. Resta: r(10)*10 - (r(9)+10) - vertical</a><br>
+
+        <br>[Avanzado]<br> 
+        <a href="javascript:resta_b28(1)">B28. Resta: r(100) - r(100) - vertical</a><br> 
+        <a href="javascript:resta_b29(1)">B29. Resta: r(500) - r(500) - vertical</a><br> 
+        <a href="javascript:resta_b30(1)">B30. Resta: r(1,000) - r(1,000) - vertical</a><br> 
+        <a href="javascript:resta_b31(1)">B31. Resta: r(10,000) - r(10,000) - vertical</a><br> 
+        <a href="javascript:resta_b32(1)">B32. Resta: r(100,000) - r(100,000) - vertical</a><br> 
+        <a href="javascript:resta_b33(1)">B33. Resta: r(1,000,000) - r(1,000,000) - vertical</a><br>
+
+        <h1>Multiplicaciones</h1>
+
+        [Básico]<br> 
+        <a href="javascript:tabladel(10, 'C1', 1, 0)">C1. Tabla del 1</a><br>
+        <a href="javascript:tabladel(10, 'C2', 2, 0)">C2. Tabla del 2</a><br>
+        <a href="javascript:tabladel(10, 'C3', 2, 1)">C3. Tabla: r(10) * r(2)</a><br>
+        <a href="javascript:tabladel(10, 'C4', 3, 0)">C4. Tabla del 3</a><br>
+        <a href="javascript:tabladel(10, 'C5', 3, 1)">C5. Tabla: r(10) * r(3)</a><br>
+        <a href="javascript:tabladel(10, 'C6', 4, 0)">C6. Tabla del 4</a><br>
+        <a href="javascript:tabladel(10, 'C7', 4, 1)">C7. Tabla: r(10) * r(4)</a><br>
+        <a href="javascript:tabladel(10, 'C8', 5, 0)">C8. Tabla del 5</a><br>
+        <a href="javascript:tabladel(10, 'C9', 5, 1)">C9. Tabla: r(10) * r(5)</a><br>
+        <a href="javascript:tabladel(10, 'C10', 6, 0)">C10. Tabla del 6</a><br>
+        <a href="javascript:tabladel(10, 'C11', 6, 1)">C11. Tabla: r(12) * r(6)</a><br>
+        <a href="javascript:tabladel(10, 'C12', 7, 0)">C12. tabla del 7</a><br>
+        <a href="javascript:tabladel(10, 'C13', 7, 1)">C13. Tabla: r(12) * r(7)</a><br>
+        <a href="javascript:tabladel(10, 'C14', 8, 0)">C14. Tabla del 8</a><br>
+        <a href="javascript:tabladel(10, 'C15', 8, 1)">C15. Tabla: r(12) * r(8)</a><br>
+        <a href="javascript:tabladel(10, 'C16', 9, 0)">C16. Tabla del 9</a><br>
+        <a href="javascript:tabladel(10, 'C17', 9, 1)">C17. Tabla: r(12) * r(9)</a><br>
+        <a href="javascript:tabladel(10, 'C18', 10, 0)">C18. Tabla del 10</a><br>
+        <a href="javascript:tabladel(10, 'C19', 10, 1)">C19. Tabla: r(12) * r(10)</a><br>
+
+        <br>[Intermedio]<br>
+        <a href="javascript:tabladel(10, 'C20', 11, 0)">C20. Tabla del 11</a><br>
+        <a href="javascript:tabladel(10, 'C21', 12, 0)">C21. Tabla del 12</a><br>
+        <a href="javascript:tabladel(10, 'C22', 13, 0)">C22. Tabla del 13</a><br>
+        <a href="javascript:tabladel(10, 'C23', 13, 1)">C23. Tabla: r(13) * r(13)</a><br>
+        <a href="javascript:c24(10)">C24. Multiplica: r(100) * r(10)</a><br>
+        <a href="javascript:c25(10)">C25. Multiplica: r(1,000) * r(10)</a><br>
+        <a href="javascript:c26(10)">C26. Multiplica: r(10,000) * r(10)</a><br>
+        <br>[Avanzado]<br> C27. Multiplica: r(10,000) * r(99)<br> C21. Multiplica: r(100,000) * r(999)<br> C22. Multiplicación japonesa<br> C23. Mutiplicación en casillas o árabe<br> C24. Multiplicación en árcos<br>
+
+
+    </div>
+
+    <div class="fotter">
+        Fotter (R)
+    </div>
+
+    <script>
+        document.getElementById('search').addEventListener('keypress', function(event) {
+            if (event.keyCode == 13) {
+                search();
+            }
+        });
+
+    </script>
+</body>
+
+</html>

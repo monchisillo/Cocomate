@@ -1,0 +1,1368 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Cocomate</title>
+
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/header-fotter.css" />
+    <link rel="stylesheet" type="text/css" href="css/form.css" />
+
+    <script type="text/javascript" src="js/db_estudiantes.js"></script>
+    <script type="text/javascript" src="js/engine.js"></script>
+    <!-- Sumas script -->
+    <script type="text/javascript" src="js/sumas.js"></script>
+    <!-- jsPDF script -->
+    <script type="text/javascript" src="js/jspdf.min.js"></script>
+</head>
+
+<body>
+
+    <div class="topnav">
+        <a class="active" href="index.html">Inicio</a>
+        <a href="estudiantes.html">Estudiantes</a>
+        <a href="programa.html">Programa</a>
+        <a href="nuevo.html">Nuevo</a>
+        <a href="#info">Info</a>
+        <div class="search-container">
+            <form onsubmit="search()">
+                <a href="#logout">Salir</a>
+                <input type="text" placeholder="Buscar..." name="search" id="search">
+            </form>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="formdiv">
+            <form id="formimprime">
+                <h1>Imprime</h1>
+                <h3>Hojas</h3>
+                <input type="text" name="hojas" id="hojas" value="3" >
+
+                <h2>Nivel A</h2>
+                <table border="0">
+
+                    <tr>
+                        <td>
+                            <label class="container">A1
+                                <input type="checkbox" name="A1" value="A1">
+                                <span class="checkmark"></span>
+                            </label>
+                        </td>
+                        <td>
+                            <label class="container">A2
+                                <input type="checkbox" name="A2" value="A2">
+                                <span class="checkmark"></span>
+                            </label>
+                        </td>
+                        <td>
+                            <label class="container">A3
+                                <input type="checkbox" name="A3" value="A3">
+                                <span class="checkmark"></span>
+                            </label>
+                        </td>
+                        <td>
+                            <label class="container">A4
+                                <input type="checkbox" name="A4" value="A4">
+                                <span class="checkmark"></span>
+                            </label>
+                        </td>
+                        <td>
+                            <label class="container">A5
+                                <input type="checkbox" name="A5" value="A5">
+                                <span class="checkmark"></span>
+                            </label>
+                        </td>
+                        <td>
+                            <label class="container">A6
+                                <input type="checkbox" name="A6" value="A6">
+                                <span class="checkmark"></span>
+                            </label>
+                        </td>
+                        <td>
+                            <label class="container">A7
+                                <input type="checkbox" name="A7" value="A7">
+                                <span class="checkmark"></span>
+                            </label>
+                        </td>
+                        <td>
+                            <label class="container">A8
+                                <input type="checkbox" name="A8" value="A8">
+                                <span class="checkmark"></span>
+                            </label>
+                        </td>
+                        <td>
+                            <label class="container">A9
+                                <input type="checkbox" name="A9" value="A9">
+                                <span class="checkmark"></span>
+                            </label>
+                        </td>
+                        <td>
+                            <label class="container">A10
+                                <input type="checkbox" name="A1" value="A10">
+                                <span class="checkmark"></span>
+                            </label>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <label class="container">A11
+                                <input type="checkbox" name="A11" value="A11">
+                                <span class="checkmark"></span>
+                            </label>
+                        </td>
+                        <td>
+                            <label class="container">A12
+                                <input type="checkbox" name="A12" value="A12">
+                                <span class="checkmark"></span>
+                            </label>
+                        </td>
+                        <td>
+                            <label class="container">A13
+                                <input type="checkbox" name="A13" value="A13">
+                                <span class="checkmark"></span>
+                            </label>
+                        </td>
+                        <td>
+                            <label class="container">A14
+                                <input type="checkbox" name="A14" value="A14">
+                                <span class="checkmark"></span>
+                            </label>
+                        </td>
+                        <td>
+                            <label class="container">A15
+                                <input type="checkbox" name="A15" value="A15">
+                                <span class="checkmark"></span>
+                            </label>
+                        </td>
+                        <td>
+                            <label class="container">A16
+                                <input type="checkbox" name="A16" value="A16">
+                                <span class="checkmark"></span>
+                            </label>
+                        </td>
+                        <td>
+                            <label class="container">A17
+                                <input type="checkbox" name="A17" value="A17">
+                                <span class="checkmark"></span>
+                            </label>
+                        </td>
+                        <td>
+                            <label class="container">A18
+                                <input type="checkbox" name="A18" value="A18">
+                                <span class="checkmark"></span>
+                            </label>
+                        </td>
+                        <td>
+                            <label class="container">A19
+                                <input type="checkbox" name="A19" value="A19">
+                                <span class="checkmark"></span>
+                            </label>
+                        </td>
+                        <td>
+                            <label class="container">A20
+                                <input type="checkbox" name="A20" value="A20">
+                                <span class="checkmark"></span>
+                            </label>
+                        </td>
+                    </tr>
+
+                    <tr>
+                            <td>
+                                <label class="container">A21
+                                    <input type="checkbox" name="A21" value="A21">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>
+                                <label class="container">A22
+                                    <input type="checkbox" name="A22" value="A22">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>
+                                <label class="container">A23
+                                    <input type="checkbox" name="A23" value="A23">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>
+                                <label class="container">A24
+                                    <input type="checkbox" name="A24" value="A24">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>
+                                <label class="container">A25
+                                    <input type="checkbox" name="A25" value="A25">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>
+                                <label class="container">A26
+                                    <input type="checkbox" name="A26" value="A26">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>
+                                <label class="container">A27
+                                    <input type="checkbox" name="A27" value="A27">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>
+                                <label class="container">A28
+                                    <input type="checkbox" name="A28" value="A28">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>
+                                <label class="container">A29
+                                    <input type="checkbox" name="A29" value="A29">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>
+                                <label class="container">A30
+                                    <input type="checkbox" name="A30" value="A30">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                        </tr>
+
+                        <tr>
+                                <td>
+                                    <label class="container">A31
+                                        <input type="checkbox" name="A31" value="A31">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </td>
+                                <td>
+                                    <label class="container">A32
+                                        <input type="checkbox" name="A32" value="A32">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </td>
+                                <td>
+                                    <label class="container">A33
+                                        <input type="checkbox" name="A33" value="A33">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </td>
+                                <td>
+                                    <label class="container">A34
+                                        <input type="checkbox" name="A34" value="A34">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </td>
+                                <td>
+                                    <label class="container">A35
+                                        <input type="checkbox" name="A35" value="A35">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </td>
+                                <td>
+                                    <label class="container">A36
+                                        <input type="checkbox" name="A36" value="A36">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </td>
+                                <td>
+                                    <label class="container">A37
+                                        <input type="checkbox" name="A37" value="A37">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </td>
+                                <td>
+                                    <label class="container">A38
+                                        <input type="checkbox" name="A38" value="A38">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </td>
+                                <td>
+                                    <label class="container">A39
+                                        <input type="checkbox" name="A39" value="A39">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </td>
+                                <td>
+                                    <label class="container">A40
+                                        <input type="checkbox" name="A40" value="A40">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </td>
+                            </tr>   
+                            
+                            <tr>
+                                    <td>
+                                        <label class="container">A41
+                                            <input type="checkbox" name="A41" value="A41">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </td>
+                                    <td>
+                                        <label class="container">A42
+                                            <input type="checkbox" name="A42" value="A42">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </td>
+                                    <td>
+                                        <label class="container">A43
+                                            <input type="checkbox" name="A43" value="A43">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </td>
+                                    <td>
+                                        <label class="container">A44
+                                            <input type="checkbox" name="A44" value="A44">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </td>
+                                    <td>
+                                        <label class="container">A45
+                                            <input type="checkbox" name="A45" value="A45">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </td>
+                                    <td>
+                                        <label class="container">A46
+                                            <input type="checkbox" name="A46" value="A46">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </td>
+                                    <td>
+                                        <label class="container">A47
+                                            <input type="checkbox" name="A47" value="A47">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </td>
+                                    <td>
+                                        <label class="container">A48
+                                            <input type="checkbox" name="A48" value="A48">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </td>
+                                    <td>
+                                        <label class="container">A49
+                                            <input type="checkbox" name="A49" value="A49">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </td>
+                                    <td>
+                                        <label class="container">A50
+                                            <input type="checkbox" name="A50" value="A50">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </td>
+                                </tr>                              
+
+                </table>
+
+                <h2>Nivel B</h2>
+                <table border="0">
+ 
+                    <tr>
+                        <td>
+                            <label class="container">B1
+                                <input type="checkbox" name="B1" value="B1">
+                                <span class="checkmark"></span>
+                            </label>
+                        </td>
+                        <td>
+                            <label class="container">B2
+                                <input type="checkbox" name="B2" value="B2">
+                                <span class="checkmark"></span>
+                            </label>
+                        </td>
+                        <td>
+                            <label class="container">B3
+                                <input type="checkbox" name="B3" value="B3">
+                                <span class="checkmark"></span>
+                            </label>
+                        </td>
+                        <td>
+                            <label class="container">B4
+                                <input type="checkbox" name="B4" value="B4">
+                                <span class="checkmark"></span>
+                            </label>
+                        </td>
+                        <td>
+                            <label class="container">B5
+                                <input type="checkbox" name="B5" value="B5">
+                                <span class="checkmark"></span>
+                            </label>
+                        </td>
+                        <td>
+                            <label class="container">B6
+                                <input type="checkbox" name="B6" value="B6">
+                                <span class="checkmark"></span>
+                            </label>
+                        </td>
+                        <td>
+                            <label class="container">B7
+                                <input type="checkbox" name="B7" value="B7">
+                                <span class="checkmark"></span>
+                            </label>
+                        </td>
+                        <td>
+                            <label class="container">B8
+                                <input type="checkbox" name="B8" value="B8">
+                                <span class="checkmark"></span>
+                            </label>
+                        </td>
+                        <td>
+                            <label class="container">B9
+                                <input type="checkbox" name="B9" value="B9">
+                                <span class="checkmark"></span>
+                            </label>
+                        </td>
+                        <td>
+                            <label class="container">B10
+                                <input type="checkbox" name="B1" value="B10">
+                                <span class="checkmark"></span>
+                            </label>
+                        </td>
+                    </tr>
+ 
+                    <tr>
+                        <td>
+                            <label class="container">B11
+                                <input type="checkbox" name="B11" value="B11">
+                                <span class="checkmark"></span>
+                            </label>
+                        </td>
+                        <td>
+                            <label class="container">B12
+                                <input type="checkbox" name="B12" value="B12">
+                                <span class="checkmark"></span>
+                            </label>
+                        </td>
+                        <td>
+                            <label class="container">B13
+                                <input type="checkbox" name="B13" value="B13">
+                                <span class="checkmark"></span>
+                            </label>
+                        </td>
+                        <td>
+                            <label class="container">B14
+                                <input type="checkbox" name="B14" value="B14">
+                                <span class="checkmark"></span>
+                            </label>
+                        </td>
+                        <td>
+                            <label class="container">B15
+                                <input type="checkbox" name="B15" value="B15">
+                                <span class="checkmark"></span>
+                            </label>
+                        </td>
+                        <td>
+                            <label class="container">B16
+                                <input type="checkbox" name="B16" value="B16">
+                                <span class="checkmark"></span>
+                            </label>
+                        </td>
+                        <td>
+                            <label class="container">B17
+                                <input type="checkbox" name="B17" value="B17">
+                                <span class="checkmark"></span>
+                            </label>
+                        </td>
+                        <td>
+                            <label class="container">B18
+                                <input type="checkbox" name="B18" value="B18">
+                                <span class="checkmark"></span>
+                            </label>
+                        </td>
+                        <td>
+                            <label class="container">B19
+                                <input type="checkbox" name="B19" value="B19">
+                                <span class="checkmark"></span>
+                            </label>
+                        </td>
+                        <td>
+                            <label class="container">B20
+                                <input type="checkbox" name="B20" value="B20">
+                                <span class="checkmark"></span>
+                            </label>
+                        </td>
+                    </tr>
+ 
+                    <tr>
+                            <td>
+                                <label class="container">B21
+                                    <input type="checkbox" name="B21" value="B21">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>
+                                <label class="container">B22
+                                    <input type="checkbox" name="B22" value="B22">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>
+                                <label class="container">B23
+                                    <input type="checkbox" name="B23" value="B23">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>
+                                <label class="container">B24
+                                    <input type="checkbox" name="B24" value="B24">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>
+                                <label class="container">B25
+                                    <input type="checkbox" name="B25" value="B25">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>
+                                <label class="container">B26
+                                    <input type="checkbox" name="B26" value="B26">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>
+                                <label class="container">B27
+                                    <input type="checkbox" name="B27" value="B27">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>
+                                <label class="container">B28
+                                    <input type="checkbox" name="B28" value="B28">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>
+                                <label class="container">B29
+                                    <input type="checkbox" name="B29" value="B29">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>
+                                <label class="container">B30
+                                    <input type="checkbox" name="B30" value="B30">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                        </tr>
+ 
+                        <tr>
+                                <td>
+                                    <label class="container">B31
+                                        <input type="checkbox" name="B31" value="B31">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </td>
+                                <td>
+                                    <label class="container">B32
+                                        <input type="checkbox" name="B32" value="B32">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </td>
+                                <td>
+                                    <label class="container">B33
+                                        <input type="checkbox" name="B33" value="B33">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </td>
+                                <td>
+                                    <label class="container">B34
+                                        <input type="checkbox" name="B34" value="B34">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </td>
+                                <td>
+                                    <label class="container">B35
+                                        <input type="checkbox" name="B35" value="B35">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </td>
+                                <td>
+                                    <label class="container">B36
+                                        <input type="checkbox" name="B36" value="B36">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </td>
+                                <td>
+                                    <label class="container">B37
+                                        <input type="checkbox" name="B37" value="B37">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </td>
+                                <td>
+                                    <label class="container">B38
+                                        <input type="checkbox" name="B38" value="B38">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </td>
+                                <td>
+                                    <label class="container">B39
+                                        <input type="checkbox" name="B39" value="B39">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </td>
+                                <td>
+                                    <label class="container">B40
+                                        <input type="checkbox" name="B40" value="B40">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </td>
+                            </tr>  
+                           
+                            <tr>
+                                    <td>
+                                        <label class="container">B41
+                                            <input type="checkbox" name="B41" value="B41">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </td>
+                                    <td>
+                                        <label class="container">B42
+                                            <input type="checkbox" name="B42" value="B42">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </td>
+                                    <td>
+                                        <label class="container">B43
+                                            <input type="checkbox" name="B43" value="B43">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </td>
+                                    <td>
+                                        <label class="container">B44
+                                            <input type="checkbox" name="B44" value="B44">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </td>
+                                    <td>
+                                        <label class="container">B45
+                                            <input type="checkbox" name="B45" value="B45">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </td>
+                                    <td>
+                                        <label class="container">B46
+                                            <input type="checkbox" name="B46" value="B46">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </td>
+                                    <td>
+                                        <label class="container">B47
+                                            <input type="checkbox" name="B47" value="B47">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </td>
+                                    <td>
+                                        <label class="container">B48
+                                            <input type="checkbox" name="B48" value="B48">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </td>
+                                    <td>
+                                        <label class="container">B49
+                                            <input type="checkbox" name="B49" value="B49">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </td>
+                                    <td>
+                                        <label class="container">B50
+                                            <input type="checkbox" name="B50" value="B50">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </td>
+                                </tr>                             
+ 
+                </table>
+ 
+                <h2>Nivel C</h2>
+                <table border="0">
+ 
+                    <tr>
+                        <td>
+                            <label class="container">C1
+                                <input type="checkbox" name="C1" value="C1">
+                                <span class="checkmark"></span>
+                            </label>
+                        </td>
+                        <td>
+                            <label class="container">C2
+                                <input type="checkbox" name="C2" value="C2">
+                                <span class="checkmark"></span>
+                            </label>
+                        </td>
+                        <td>
+                            <label class="container">C3
+                                <input type="checkbox" name="C3" value="C3">
+                                <span class="checkmark"></span>
+                            </label>
+                        </td>
+                        <td>
+                            <label class="container">C4
+                                <input type="checkbox" name="C4" value="C4">
+                                <span class="checkmark"></span>
+                            </label>
+                        </td>
+                        <td>
+                            <label class="container">C5
+                                <input type="checkbox" name="C5" value="C5">
+                                <span class="checkmark"></span>
+                            </label>
+                        </td>
+                        <td>
+                            <label class="container">C6
+                                <input type="checkbox" name="C6" value="C6">
+                                <span class="checkmark"></span>
+                            </label>
+                        </td>
+                        <td>
+                            <label class="container">C7
+                                <input type="checkbox" name="C7" value="C7">
+                                <span class="checkmark"></span>
+                            </label>
+                        </td>
+                        <td>
+                            <label class="container">C8
+                                <input type="checkbox" name="C8" value="C8">
+                                <span class="checkmark"></span>
+                            </label>
+                        </td>
+                        <td>
+                            <label class="container">C9
+                                <input type="checkbox" name="C9" value="C9">
+                                <span class="checkmark"></span>
+                            </label>
+                        </td>
+                        <td>
+                            <label class="container">C10
+                                <input type="checkbox" name="C1" value="C10">
+                                <span class="checkmark"></span>
+                            </label>
+                        </td>
+                    </tr>
+ 
+                    <tr>
+                        <td>
+                            <label class="container">C11
+                                <input type="checkbox" name="C11" value="C11">
+                                <span class="checkmark"></span>
+                            </label>
+                        </td>
+                        <td>
+                            <label class="container">C12
+                                <input type="checkbox" name="C12" value="C12">
+                                <span class="checkmark"></span>
+                            </label>
+                        </td>
+                        <td>
+                            <label class="container">C13
+                                <input type="checkbox" name="C13" value="C13">
+                                <span class="checkmark"></span>
+                            </label>
+                        </td>
+                        <td>
+                            <label class="container">C14
+                                <input type="checkbox" name="C14" value="C14">
+                                <span class="checkmark"></span>
+                            </label>
+                        </td>
+                        <td>
+                            <label class="container">C15
+                                <input type="checkbox" name="C15" value="C15">
+                                <span class="checkmark"></span>
+                            </label>
+                        </td>
+                        <td>
+                            <label class="container">C16
+                                <input type="checkbox" name="C16" value="C16">
+                                <span class="checkmark"></span>
+                            </label>
+                        </td>
+                        <td>
+                            <label class="container">C17
+                                <input type="checkbox" name="C17" value="C17">
+                                <span class="checkmark"></span>
+                            </label>
+                        </td>
+                        <td>
+                            <label class="container">C18
+                                <input type="checkbox" name="C18" value="C18">
+                                <span class="checkmark"></span>
+                            </label>
+                        </td>
+                        <td>
+                            <label class="container">C19
+                                <input type="checkbox" name="C19" value="C19">
+                                <span class="checkmark"></span>
+                            </label>
+                        </td>
+                        <td>
+                            <label class="container">C20
+                                <input type="checkbox" name="C20" value="C20">
+                                <span class="checkmark"></span>
+                            </label>
+                        </td>
+                    </tr>
+ 
+                    <tr>
+                            <td>
+                                <label class="container">C21
+                                    <input type="checkbox" name="C21" value="C21">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>
+                                <label class="container">C22
+                                    <input type="checkbox" name="C22" value="C22">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>
+                                <label class="container">C23
+                                    <input type="checkbox" name="C23" value="C23">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>
+                                <label class="container">C24
+                                    <input type="checkbox" name="C24" value="C24">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>
+                                <label class="container">C25
+                                    <input type="checkbox" name="C25" value="C25">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>
+                                <label class="container">C26
+                                    <input type="checkbox" name="C26" value="C26">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>
+                                <label class="container">C27
+                                    <input type="checkbox" name="C27" value="C27">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>
+                                <label class="container">C28
+                                    <input type="checkbox" name="C28" value="C28">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>
+                                <label class="container">C29
+                                    <input type="checkbox" name="C29" value="C29">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>
+                                <label class="container">C30
+                                    <input type="checkbox" name="C30" value="C30">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                        </tr>
+ 
+                        <tr>
+                                <td>
+                                    <label class="container">C31
+                                        <input type="checkbox" name="C31" value="C31">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </td>
+                                <td>
+                                    <label class="container">C32
+                                        <input type="checkbox" name="C32" value="C32">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </td>
+                                <td>
+                                    <label class="container">C33
+                                        <input type="checkbox" name="C33" value="C33">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </td>
+                                <td>
+                                    <label class="container">C34
+                                        <input type="checkbox" name="C34" value="C34">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </td>
+                                <td>
+                                    <label class="container">C35
+                                        <input type="checkbox" name="C35" value="C35">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </td>
+                                <td>
+                                    <label class="container">C36
+                                        <input type="checkbox" name="C36" value="C36">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </td>
+                                <td>
+                                    <label class="container">C37
+                                        <input type="checkbox" name="C37" value="C37">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </td>
+                                <td>
+                                    <label class="container">C38
+                                        <input type="checkbox" name="C38" value="C38">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </td>
+                                <td>
+                                    <label class="container">C39
+                                        <input type="checkbox" name="C39" value="C39">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </td>
+                                <td>
+                                    <label class="container">C40
+                                        <input type="checkbox" name="C40" value="C40">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </td>
+                            </tr>  
+                           
+                            <tr>
+                                    <td>
+                                        <label class="container">C41
+                                            <input type="checkbox" name="C41" value="C41">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </td>
+                                    <td>
+                                        <label class="container">C42
+                                            <input type="checkbox" name="C42" value="C42">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </td>
+                                    <td>
+                                        <label class="container">C43
+                                            <input type="checkbox" name="C43" value="C43">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </td>
+                                    <td>
+                                        <label class="container">C44
+                                            <input type="checkbox" name="C44" value="C44">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </td>
+                                    <td>
+                                        <label class="container">C45
+                                            <input type="checkbox" name="C45" value="C45">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </td>
+                                    <td>
+                                        <label class="container">C46
+                                            <input type="checkbox" name="C46" value="C46">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </td>
+                                    <td>
+                                        <label class="container">C47
+                                            <input type="checkbox" name="C47" value="C47">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </td>
+                                    <td>
+                                        <label class="container">C48
+                                            <input type="checkbox" name="C48" value="C48">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </td>
+                                    <td>
+                                        <label class="container">C49
+                                            <input type="checkbox" name="C49" value="C49">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </td>
+                                    <td>
+                                        <label class="container">C50
+                                            <input type="checkbox" name="C50" value="C50">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </td>
+                                </tr>                             
+ 
+                </table>
+ 
+                <h2>Nivel D</h2>
+                <table border="0">
+ 
+                    <tr>
+                        <td>
+                            <label class="container">D1
+                                <input type="checkbox" name="D1" value="D1">
+                                <span class="checkmark"></span>
+                            </label>
+                        </td>
+                        <td>
+                            <label class="container">D2
+                                <input type="checkbox" name="D2" value="D2">
+                                <span class="checkmark"></span>
+                            </label>
+                        </td>
+                        <td>
+                            <label class="container">D3
+                                <input type="checkbox" name="D3" value="D3">
+                                <span class="checkmark"></span>
+                            </label>
+                        </td>
+                        <td>
+                            <label class="container">D4
+                                <input type="checkbox" name="D4" value="D4">
+                                <span class="checkmark"></span>
+                            </label>
+                        </td>
+                        <td>
+                            <label class="container">D5
+                                <input type="checkbox" name="D5" value="D5">
+                                <span class="checkmark"></span>
+                            </label>
+                        </td>
+                        <td>
+                            <label class="container">D6
+                                <input type="checkbox" name="D6" value="D6">
+                                <span class="checkmark"></span>
+                            </label>
+                        </td>
+                        <td>
+                            <label class="container">D7
+                                <input type="checkbox" name="D7" value="D7">
+                                <span class="checkmark"></span>
+                            </label>
+                        </td>
+                        <td>
+                            <label class="container">D8
+                                <input type="checkbox" name="D8" value="D8">
+                                <span class="checkmark"></span>
+                            </label>
+                        </td>
+                        <td>
+                            <label class="container">D9
+                                <input type="checkbox" name="D9" value="D9">
+                                <span class="checkmark"></span>
+                            </label>
+                        </td>
+                        <td>
+                            <label class="container">D10
+                                <input type="checkbox" name="D1" value="D10">
+                                <span class="checkmark"></span>
+                            </label>
+                        </td>
+                    </tr>
+ 
+                    <tr>
+                        <td>
+                            <label class="container">D11
+                                <input type="checkbox" name="D11" value="D11">
+                                <span class="checkmark"></span>
+                            </label>
+                        </td>
+                        <td>
+                            <label class="container">D12
+                                <input type="checkbox" name="D12" value="D12">
+                                <span class="checkmark"></span>
+                            </label>
+                        </td>
+                        <td>
+                            <label class="container">D13
+                                <input type="checkbox" name="D13" value="D13">
+                                <span class="checkmark"></span>
+                            </label>
+                        </td>
+                        <td>
+                            <label class="container">D14
+                                <input type="checkbox" name="D14" value="D14">
+                                <span class="checkmark"></span>
+                            </label>
+                        </td>
+                        <td>
+                            <label class="container">D15
+                                <input type="checkbox" name="D15" value="D15">
+                                <span class="checkmark"></span>
+                            </label>
+                        </td>
+                        <td>
+                            <label class="container">D16
+                                <input type="checkbox" name="D16" value="D16">
+                                <span class="checkmark"></span>
+                            </label>
+                        </td>
+                        <td>
+                            <label class="container">D17
+                                <input type="checkbox" name="D17" value="D17">
+                                <span class="checkmark"></span>
+                            </label>
+                        </td>
+                        <td>
+                            <label class="container">D18
+                                <input type="checkbox" name="D18" value="D18">
+                                <span class="checkmark"></span>
+                            </label>
+                        </td>
+                        <td>
+                            <label class="container">D19
+                                <input type="checkbox" name="D19" value="D19">
+                                <span class="checkmark"></span>
+                            </label>
+                        </td>
+                        <td>
+                            <label class="container">D20
+                                <input type="checkbox" name="D20" value="D20">
+                                <span class="checkmark"></span>
+                            </label>
+                        </td>
+                    </tr>
+ 
+                    <tr>
+                            <td>
+                                <label class="container">D21
+                                    <input type="checkbox" name="D21" value="D21">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>
+                                <label class="container">D22
+                                    <input type="checkbox" name="D22" value="D22">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>
+                                <label class="container">D23
+                                    <input type="checkbox" name="D23" value="D23">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>
+                                <label class="container">D24
+                                    <input type="checkbox" name="D24" value="D24">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>
+                                <label class="container">D25
+                                    <input type="checkbox" name="D25" value="D25">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>
+                                <label class="container">D26
+                                    <input type="checkbox" name="D26" value="D26">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>
+                                <label class="container">D27
+                                    <input type="checkbox" name="D27" value="D27">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>
+                                <label class="container">D28
+                                    <input type="checkbox" name="D28" value="D28">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>
+                                <label class="container">D29
+                                    <input type="checkbox" name="D29" value="D29">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>
+                                <label class="container">D30
+                                    <input type="checkbox" name="D30" value="D30">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                        </tr>
+ 
+                        <tr>
+                                <td>
+                                    <label class="container">D31
+                                        <input type="checkbox" name="D31" value="D31">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </td>
+                                <td>
+                                    <label class="container">D32
+                                        <input type="checkbox" name="D32" value="D32">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </td>
+                                <td>
+                                    <label class="container">D33
+                                        <input type="checkbox" name="D33" value="D33">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </td>
+                                <td>
+                                    <label class="container">D34
+                                        <input type="checkbox" name="D34" value="D34">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </td>
+                                <td>
+                                    <label class="container">D35
+                                        <input type="checkbox" name="D35" value="D35">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </td>
+                                <td>
+                                    <label class="container">D36
+                                        <input type="checkbox" name="D36" value="D36">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </td>
+                                <td>
+                                    <label class="container">D37
+                                        <input type="checkbox" name="D37" value="D37">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </td>
+                                <td>
+                                    <label class="container">D38
+                                        <input type="checkbox" name="D38" value="D38">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </td>
+                                <td>
+                                    <label class="container">D39
+                                        <input type="checkbox" name="D39" value="D39">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </td>
+                                <td>
+                                    <label class="container">D40
+                                        <input type="checkbox" name="D40" value="D40">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </td>
+                            </tr>  
+                           
+                            <tr>
+                                    <td>
+                                        <label class="container">D41
+                                            <input type="checkbox" name="D41" value="D41">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </td>
+                                    <td>
+                                        <label class="container">D42
+                                            <input type="checkbox" name="D42" value="D42">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </td>
+                                    <td>
+                                        <label class="container">D43
+                                            <input type="checkbox" name="D43" value="D43">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </td>
+                                    <td>
+                                        <label class="container">D44
+                                            <input type="checkbox" name="D44" value="D44">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </td>
+                                    <td>
+                                        <label class="container">D45
+                                            <input type="checkbox" name="D45" value="D45">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </td>
+                                    <td>
+                                        <label class="container">D46
+                                            <input type="checkbox" name="D46" value="D46">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </td>
+                                    <td>
+                                        <label class="container">D47
+                                            <input type="checkbox" name="D47" value="D47">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </td>
+                                    <td>
+                                        <label class="container">D48
+                                            <input type="checkbox" name="D48" value="D48">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </td>
+                                    <td>
+                                        <label class="container">D49
+                                            <input type="checkbox" name="D49" value="D49">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </td>
+                                    <td>
+                                        <label class="container">D50
+                                            <input type="checkbox" name="D50" value="D50">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </td>
+                                </tr>                             
+ 
+                </table>
+
+                <button onclick="imprimir()">Imprimir</button>
+            </form>
+        </div>
+
+        <div id="list">
+        </div>
+    </div>
+
+
+
+    <div class="fotter">
+        Fotter (R)
+    </div>
+
+    <!-- Necesario -->
+    <script>
+        document.getElementById('search').addEventListener('keypress', function (event) {
+            if (event.keyCode == 13) {
+                search();
+            }
+        });
+
+    </script>
+    <!-- FIREBASE!!! -->
+    <script src="https://www.gstatic.com/firebasejs/5.0.2/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyC7V2LKodjWeU3OBsBsUkgoE5SCy4RBpiI",
+            authDomain: "cocomate-51e06.firebaseapp.com",
+            databaseURL: "https://cocomate-51e06.firebaseio.com",
+            projectId: "cocomate-51e06",
+            storageBucket: "",
+            messagingSenderId: "127081206525"
+        };
+        firebase.initializeApp(config);
+
+    </script>
+
+</body>
+
+</html>

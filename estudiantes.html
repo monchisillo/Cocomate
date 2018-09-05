@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Programa completo</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/header-fotter.css" />
+    <link rel="stylesheet" type="text/css" href="css/form.css" />
+
+    <script type="text/javascript" src="js/db_estudiantes.js"></script>
+    <script type="text/javascript" src="js/engine.js"></script>
+    <!-- Sumas script -->
+	<script type="text/javascript" src="js/sumas.js"></script>
+	<!-- jsPDF script -->
+    <script type="text/javascript" src="js/jspdf.min.js"></script>
+</head>
+
+<body>
+
+    <div class="topnav">
+        <a  href="index.html">Inicio</a>
+        <a class="active" href="estudiantes.html">Estudiantes</a>
+        <a href="programa.html">Programa</a>
+        <a href="nuevo.html">Nuevo</a>
+        <a href="#info">Info</a>
+        <div class="search-container">
+            <form onsubmit="search()">
+                <a href="#logout">Salir</a>
+                <input type="text" placeholder="Buscar..." name="search" id="search">
+            </form>
+        </div>
+    </div>
+
+    <div class="content">
+        
+        <div id="list">
+            <!-- la inf la jalamos de aqui: $('#list').append( -->
+        </div>
+    </div>
+
+
+
+    <div class="fotter">
+        Fotter (R)
+    </div>
+
+    <!-- Necesario -->
+    <script>
+        document.getElementById('search').addEventListener('keypress', function (event) {
+            if (event.keyCode == 13) {
+                search();
+            }
+        });
+    </script>
+
+<script src="https://www.gstatic.com/firebasejs/5.0.2/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyC7V2LKodjWeU3OBsBsUkgoE5SCy4RBpiI",
+    authDomain: "cocomate-51e06.firebaseapp.com",
+    databaseURL: "https://cocomate-51e06.firebaseio.com",
+    projectId: "cocomate-51e06",
+    storageBucket: "cocomate-51e06.appspot.com",
+    messagingSenderId: "127081206525"
+  };
+  firebase.initializeApp(config);
+
+var db = firebase.database();
+
+var ref = firebase.database().ref("estudiantes").on("child_added", function(snapshot) {
+    var e = snapshot.val();
+    // console.log(usuario.nombre);
+    $('#list').append(
+        "Nombre: " + e.nombre + "<br>" +
+        "Fecha de nacimiento: " + e.fecha + "<br>" +
+        "Escuela: " + e.escuela + "<br>" +
+        "Grado: " + e.grado + "<br>" +
+        "Tutor: " + e.tutor + "<br>" +
+        "Dirección: " + e.direccion + "<br>" +
+        "Telefono: " + e.telefono + "<br><hr>"
+    );
+   //console.log(snapshot.key);
+})
+</script>
+
+ <!-- jQuery CDN -->
+ <script src="https://code.jquery.com/jquery-3.3.1.min.js" 
+ integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" 
+ crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
